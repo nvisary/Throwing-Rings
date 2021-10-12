@@ -42,6 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Tester.cs" />
+     <Compile Include="Assets\Scripts\AnchorGameObject.cs" />
+     <Compile Include="Assets\Scripts\CameraViewportHandler.cs" />
      <Reference Include="UnityEngine">
      <HintPath>D:/programs/unity/2021.1.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -695,7 +698,6 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
