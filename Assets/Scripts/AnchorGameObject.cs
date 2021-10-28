@@ -28,13 +28,13 @@ public class AnchorGameObject : MonoBehaviour
     public Orientation orientation;
     public Vector3 anchorOffset;
 
-    IEnumerator updateAnchorRoutine; //Coroutine handle so we don't start it if it's already running
+    IEnumerator _updateAnchorRoutine; //Coroutine handle so we don't start it if it's already running
 
     // Use this for initialization
     void Start()
     {
-        updateAnchorRoutine = UpdateAnchorAsync();
-        StartCoroutine(updateAnchorRoutine);
+        _updateAnchorRoutine = UpdateAnchorAsync();
+        StartCoroutine(_updateAnchorRoutine);
     }
 
     /// <summary>
@@ -58,7 +58,7 @@ public class AnchorGameObject : MonoBehaviour
         }
 
         UpdateAnchor();
-        updateAnchorRoutine = null;
+        _updateAnchorRoutine = null;
 
     }
 
@@ -124,10 +124,10 @@ public class AnchorGameObject : MonoBehaviour
     void Update()
     {
         
-        if (updateAnchorRoutine == null && executeInUpdate)
+        if (_updateAnchorRoutine == null && executeInUpdate)
         {
-            updateAnchorRoutine = UpdateAnchorAsync();
-            StartCoroutine(updateAnchorRoutine);
+            _updateAnchorRoutine = UpdateAnchorAsync();
+            StartCoroutine(_updateAnchorRoutine);
         }
     }
 #endif
