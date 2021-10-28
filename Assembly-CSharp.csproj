@@ -42,9 +42,10 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Tester.cs" />
-     <Compile Include="Assets\Scripts\AnchorGameObject.cs" />
      <Compile Include="Assets\Scripts\CameraViewportHandler.cs" />
+     <Compile Include="Assets\Scripts\AnchorGameObject.cs" />
+     <Compile Include="Assets\Tester.cs" />
+     <Compile Include="Assets\Scripts\Stick.cs" />
      <Reference Include="UnityEngine">
      <HintPath>D:/programs/unity/2021.1.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
