@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "09271JECB10950",
         "name": "com.DefaultCompany.ThrowingRingsalpha",
-        "processId": 20202,
+        "processId": 17657,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -24,6 +24,42 @@
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
             "processId": 20202,
+            "exited": false
+        },
+        {
+            "deviceId": "09271JECB10950",
+            "name": "com.DefaultCompany.ThrowingRingsalpha",
+            "processId": 9309,
+            "exited": false
+        },
+        {
+            "deviceId": "09271JECB10950",
+            "name": "com.DefaultCompany.ThrowingRingsalpha",
+            "processId": 10950,
+            "exited": false
+        },
+        {
+            "deviceId": "09271JECB10950",
+            "name": "com.DefaultCompany.ThrowingRingsalpha",
+            "processId": 11152,
+            "exited": false
+        },
+        {
+            "deviceId": "09271JECB10950",
+            "name": "com.DefaultCompany.ThrowingRingsalpha",
+            "processId": 14315,
+            "exited": false
+        },
+        {
+            "deviceId": "09271JECB10950",
+            "name": "com.DefaultCompany.ThrowingRingsalpha",
+            "processId": 16320,
+            "exited": false
+        },
+        {
+            "deviceId": "09271JECB10950",
+            "name": "com.DefaultCompany.ThrowingRingsalpha",
+            "processId": 17657,
             "exited": false
         }
     ],

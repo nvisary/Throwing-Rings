@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class Ring : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private GameManager _gameManager;
+    private void Awake()
     {
-        
+        _gameManager = FindObjectOfType<GameManager>();
+        GetComponent<Rigidbody>().mass = _gameManager ? _gameManager.ringMass : 5f;
+    }
+    
+    private void OnValidate()
+    {
+        GetComponent<Rigidbody>().mass = _gameManager ? _gameManager.ringMass : 5f;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateMass(float mass)
     {
-        
+        GetComponent<Rigidbody>().mass = mass;
     }
 }

@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\Stick.cs" />
      <Compile Include="Assets\Scripts\HitForce.cs" />
      <Compile Include="Assets\Scripts\Ring.cs" />
+     <Compile Include="Assets\Scripts\FormInputController.cs" />
      <Reference Include="UnityEngine">
      <HintPath>D:/programs/unity/2021.1.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

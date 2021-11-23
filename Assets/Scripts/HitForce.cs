@@ -7,16 +7,26 @@ using UnityEngine;
 public class HitForce : MonoBehaviour
 {
     private Rigidbody[] _rigidbodies;
+    private GameManager _gameManager;
     
     [SerializeField]
-    private float _force = 50f;
-
-    private bool _isForce = false;
+    private ForceDirection _forceDirection;
     
+    public enum ForceDirection
+    {
+        Left, Right
+    }
+    
+    private bool _isForce = false;
+
+    private void Awake()
+    {
+        _gameManager = FindObjectOfType<GameManager>();
+    }
+
     void Start()
     {
         var rings = FindObjectsOfType<Ring>();
-
         _rigidbodies = rings.Select(ring => ring.GetComponent<Rigidbody>()).ToArray();
     }
 
@@ -41,12 +51,14 @@ public class HitForce : MonoBehaviour
 
     public void Hit()
     {
+        Debug.Log(_gameManager.ringMass);
+        var force = _forceDirection == ForceDirection.Left ? _gameManager.leftForce : _gameManager.rightForce; 
         for (int i = 0; i < _rigidbodies.Length; i++)
         {
             var position = transform.position;
             
             float distance = Vector3.Distance(position, _rigidbodies[i].transform.position);
-            _rigidbodies[i].AddForceAtPosition(transform.up * _force / distance, position);
+            _rigidbodies[i].AddForceAtPosition(transform.up * force / distance, position);
         }
     }
 }
