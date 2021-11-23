@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "09271JECB10950",
         "name": "com.DefaultCompany.ThrowingRingsalpha",
-        "processId": 20202,
+        "processId": 28503,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,18 +12,30 @@
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
             "processId": 16180,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
             "processId": 17543,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
             "processId": 20202,
+            "exited": true
+        },
+        {
+            "deviceId": "09271JECB10950",
+            "name": "org.telegram.messenger",
+            "processId": 26357,
+            "exited": false
+        },
+        {
+            "deviceId": "09271JECB10950",
+            "name": "com.DefaultCompany.ThrowingRingsalpha",
+            "processId": 28503,
             "exited": false
         }
     ],
