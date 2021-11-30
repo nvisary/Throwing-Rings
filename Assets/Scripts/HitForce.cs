@@ -50,9 +50,8 @@ public class HitForce : MonoBehaviour
 
     public void Hit()
     {
-        Debug.Log(_gameManager.ringMass);
         var force = _forceDirection == ForceDirection.Left ? _gameManager.leftForce : _gameManager.rightForce; 
-        for (int i = 0; i < _gameManager.rigidbodies.Length; i++)
+        for (int i = 0; i < _gameManager.countRings; i++)
         {
             var position = transform.position;
             

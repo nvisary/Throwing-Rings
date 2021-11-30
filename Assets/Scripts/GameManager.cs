@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
     
     public void SetLeftForce(string value)
     {
+        Debug.Log("updated" + float.Parse(value));
         leftForce = float.Parse(value);
     }
     
