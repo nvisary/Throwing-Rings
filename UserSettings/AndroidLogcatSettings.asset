@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "09271JECB10950",
         "name": "com.DefaultCompany.ThrowingRingsalpha",
-        "processId": 17657,
+        "processId": 8642,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,54 +12,60 @@
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
             "processId": 16180,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
             "processId": 17543,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
             "processId": 20202,
+            "exited": true
+        },
+        {
+            "deviceId": "09271JECB10950",
+            "name": "org.telegram.messenger",
+            "processId": 26357,
             "exited": false
         },
         {
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
-            "processId": 9309,
+            "processId": 28503,
             "exited": false
         },
         {
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
-            "processId": 10950,
+            "processId": 4774,
             "exited": false
         },
         {
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
-            "processId": 11152,
+            "processId": 7173,
             "exited": false
         },
         {
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
-            "processId": 14315,
+            "processId": 7663,
             "exited": false
         },
         {
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
-            "processId": 16320,
+            "processId": 8005,
             "exited": false
         },
         {
             "deviceId": "09271JECB10950",
             "name": "com.DefaultCompany.ThrowingRingsalpha",
-            "processId": 17657,
+            "processId": 8642,
             "exited": false
         }
     ],

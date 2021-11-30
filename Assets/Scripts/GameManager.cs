@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Schema;
@@ -10,7 +11,21 @@ public class GameManager : MonoBehaviour
     public float ringMass = 5f;
     public float leftForce = 50f;
     public float rightForce = 50f;
-    
+
+    public float countRings = 1;
+
+    private void Start()
+    {
+        Application.targetFrameRate = 60;
+    }
+
+    public void AddRing()
+    {
+        countRings++;
+        // add Ring prefab to scene
+        // update UI 
+    }
+
     public void EnableDebugPanel()
     {
         debugPanel.SetActive(true);
