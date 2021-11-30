@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HitForce : MonoBehaviour
@@ -26,8 +27,6 @@ public class HitForce : MonoBehaviour
 
     void Start()
     {
-        var rings = FindObjectsOfType<Ring>();
-        _rigidbodies = rings.Select(ring => ring.GetComponent<Rigidbody>()).ToArray();
     }
 
     private void FixedUpdate()
@@ -53,12 +52,12 @@ public class HitForce : MonoBehaviour
     {
         Debug.Log(_gameManager.ringMass);
         var force = _forceDirection == ForceDirection.Left ? _gameManager.leftForce : _gameManager.rightForce; 
-        for (int i = 0; i < _rigidbodies.Length; i++)
+        for (int i = 0; i < _gameManager.rigidbodies.Length; i++)
         {
             var position = transform.position;
             
-            float distance = Vector3.Distance(position, _rigidbodies[i].transform.position);
-            _rigidbodies[i].AddForceAtPosition(transform.up * force / distance, position);
+            float distance = Vector3.Distance(position, _gameManager.rigidbodies[i].transform.position);
+            _gameManager.rigidbodies[i].AddForceAtPosition(transform.up * force / distance, position);
         }
     }
 }

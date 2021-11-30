@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Schema;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,18 +14,44 @@ public class GameManager : MonoBehaviour
     public float leftForce = 50f;
     public float rightForce = 50f;
 
-    public float countRings = 1;
+    public int countRings = 0;
+
+    [SerializeField]
+    private GameObject ringPrefab;
+
+    [SerializeField] 
+    private int maxRings = 20;
+    
+    public Rigidbody[] rigidbodies;
+    
+    // UI 
+    public Text countRingsText; 
+    
+    private void Awake()
+    {
+        rigidbodies = new Rigidbody[maxRings];
+    }
 
     private void Start()
     {
         Application.targetFrameRate = 60;
+        AddRing();
     }
 
     public void AddRing()
     {
-        countRings++;
-        // add Ring prefab to scene
-        // update UI 
+        if (countRings >= 10) return;
+        GameObject ring = Instantiate(ringPrefab);
+        rigidbodies[countRings++] = ring.GetComponent<Rigidbody>();
+        countRingsText.text = countRings.ToString();
+    }
+
+    public void RemoveRing()
+    {
+        if (countRings <= 0) return;
+        Destroy(rigidbodies[countRings - 1].gameObject);
+        countRings--;
+        countRingsText.text = countRings.ToString();
     }
 
     public void EnableDebugPanel()
