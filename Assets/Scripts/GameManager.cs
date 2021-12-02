@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     public void AddRing()
     {
-        if (countRings >= 10) return;
+        if (countRings >= maxRings) return;
         GameObject ring = Instantiate(ringPrefab);
         rigidbodies[countRings++] = ring.GetComponent<Rigidbody>();
         countRingsText.text = countRings.ToString();
@@ -83,15 +83,20 @@ public class GameManager : MonoBehaviour
         rightForce = float.Parse(value);
     }
 
+    private void UpdateScoreText()
+    {
+        scoreText.text = "Score: " + score;
+    }
+
     public void AddPoint()
     {
         score++;
-        scoreText.text = "Score: " + score;
+        UpdateScoreText();
     }
 
     public void RemovePoint()
     {
         score--;
-        scoreText.text = "Score: " + score;
+        UpdateScoreText();
     }
 }
