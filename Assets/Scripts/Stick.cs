@@ -7,12 +7,20 @@ using UnityEngine;
 public class Stick : MonoBehaviour
 {
 
-    private void Awake()
+    private GameManager _gameManager;
+
+    private void Start()
     {
+        _gameManager = FindObjectOfType<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
+        _gameManager.AddPoint();
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        _gameManager.RemovePoint();
     }
 }

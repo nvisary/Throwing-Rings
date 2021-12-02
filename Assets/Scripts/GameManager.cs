@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public int countRings = 0;
 
+    public int score = 0;
+
     [SerializeField]
     private GameObject ringPrefab;
 
@@ -25,7 +27,8 @@ public class GameManager : MonoBehaviour
     public Rigidbody[] rigidbodies;
     
     // UI 
-    public Text countRingsText; 
+    public Text countRingsText;
+    public Text scoreText;
     
     private void Awake()
     {
@@ -78,5 +81,17 @@ public class GameManager : MonoBehaviour
     public void SetRightForce(string value)
     {
         rightForce = float.Parse(value);
+    }
+
+    public void AddPoint()
+    {
+        score++;
+        scoreText.text = "Score: " + score;
+    }
+
+    public void RemovePoint()
+    {
+        score--;
+        scoreText.text = "Score: " + score;
     }
 }
