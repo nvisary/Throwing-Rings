@@ -18,7 +18,6 @@ public class FormInputController : MonoBehaviour
     {
         _label = GetComponentInChildren<Text>();
         _inputField = GetComponentInChildren<InputField>();
-        Debug.Log(_inputField);
     }
 
     private void Start()
