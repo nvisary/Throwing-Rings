@@ -37,15 +37,23 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Application.targetFrameRate = 60;
+        // TODO: How to define how frame rate set? may be can set 120 fps, but in 60hz displays not needed
+        Application.targetFrameRate = 60; 
+        
+        // TODO: For Debug Mode, create level system, please
         AddRing();
     }
 
     public void AddRing()
     {
         if (countRings >= maxRings) return;
+        
         GameObject ring = Instantiate(ringPrefab);
-        rigidbodies[countRings++] = ring.GetComponent<Rigidbody>();
+        Rigidbody ringRigidBody = ring.GetComponent<Rigidbody>();
+        
+        ringRigidBody.mass = ringMass;
+        
+        rigidbodies[countRings++] = ringRigidBody;
         countRingsText.text = countRings.ToString();
     }
 
@@ -69,12 +77,20 @@ public class GameManager : MonoBehaviour
 
     public void SetRingMass(string value)
     {
-        ringMass = float.Parse(value);
+        Debug.Log("SetRingMass");
+        if (float.TryParse(value, out ringMass))
+        {
+            Debug.Log("Updated " + this.ToString());
+
+            for (int i = 0; i < rigidbodies.Length; i++)
+            {
+                rigidbodies[i].mass = ringMass;
+            }       
+        }
     }
     
     public void SetLeftForce(string value)
     {
-        Debug.Log("updated" + float.Parse(value));
         leftForce = float.Parse(value);
     }
     
@@ -85,6 +101,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScoreText()
     {
+        // TODO: Create Static class to manipulate texts on UI
         scoreText.text = "Score: " + score;
     }
 

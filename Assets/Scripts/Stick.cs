@@ -1,13 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteInEditMode]
 public class Stick : MonoBehaviour
 {
-
     private GameManager _gameManager;
+    
+    public ParticleSystem particleSystem;
 
     private void Start()
     {
@@ -17,6 +15,7 @@ public class Stick : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         _gameManager.AddPoint();
+        particleSystem.Play();
     }
 
     private void OnTriggerExit(Collider other)

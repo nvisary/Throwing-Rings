@@ -23,7 +23,6 @@ public class FPSCounter : MonoBehaviour
     private void UpdateUISize()
     {
         _screenLongSide = Mathf.Max(Screen.width, Screen.height);
-        Debug.Log(_screenLongSide);
         float rectLongSide = _screenLongSide / 10f;
         _boxRect = new Rect(rectLongSide, 1, rectLongSide, rectLongSide / 3);
         _guiStyle.fontSize = (int) (_screenLongSide / 36.8f);
