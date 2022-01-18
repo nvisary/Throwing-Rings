@@ -48,7 +48,6 @@
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\FormInputController.cs" />
      <Compile Include="Assets\Scripts\FPSCounter.cs" />
-     <Compile Include="Assets\Tester.cs" />
      <Compile Include="Assets\Scripts\Stick.cs" />
      <Compile Include="Assets\Scripts\HitForce.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
