@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class HitForce : MonoBehaviour
 {
@@ -23,10 +24,6 @@ public class HitForce : MonoBehaviour
     private void Awake()
     {
         _gameManager = FindObjectOfType<GameManager>();
-    }
-
-    void Start()
-    {
     }
 
     private void FixedUpdate()
@@ -56,7 +53,8 @@ public class HitForce : MonoBehaviour
             var position = transform.position;
             
             float distance = Vector3.Distance(position, _gameManager.rigidbodies[i].transform.position);
-            _gameManager.rigidbodies[i].AddForceAtPosition(transform.up * force / distance, position);
+            Vector3 offsetZ = new Vector3(1f, 1f, Random.Range(-20f, 20f));
+            _gameManager.rigidbodies[i].AddForceAtPosition((transform.up * force / distance) + offsetZ, position);
         }
     }
 }

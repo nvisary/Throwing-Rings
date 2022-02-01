@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject debugPanel;
 
     public float ringMass = 5f;
-    public float leftForce = 50f;
-    public float rightForce = 50f;
+    public float leftForce = 150f;
+    public float rightForce = 150f;
 
     public int countRings = 0;
 

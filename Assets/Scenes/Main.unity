@@ -7083,7 +7083,7 @@ PrefabInstance:
     - target: {fileID: 1402427314700839936, guid: 1cdff655b65d2074686bd1fe3076dbdf,
         type: 3}
       propertyPath: m_Text
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1402427314700839936, guid: 1cdff655b65d2074686bd1fe3076dbdf,
         type: 3}
@@ -7495,7 +7495,7 @@ PrefabInstance:
     - target: {fileID: 1402427314700839936, guid: 1cdff655b65d2074686bd1fe3076dbdf,
         type: 3}
       propertyPath: m_Text
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1402427314700839936, guid: 1cdff655b65d2074686bd1fe3076dbdf,
         type: 3}
@@ -12951,8 +12951,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugPanel: {fileID: 1299034654}
   ringMass: 5
-  leftForce: 50
-  rightForce: 50
+  leftForce: 150
+  rightForce: 150
   countRings: 0
   score: 0
   ringPrefab: {fileID: 5936974836059577376, guid: 15257aa83be52e84ab29792040a95e94,

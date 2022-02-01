@@ -21,5 +21,6 @@ public class Stick : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         _gameManager.RemovePoint();
+        particleSystem.Stop();
     }
 }
